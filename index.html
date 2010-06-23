@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+	<head>
+		<title>TinyAlert - Mootools</title>
+		<script src="../../lib/mootools-1.2.4-core-nc.js" type="text/javascript" charset="utf-8"></script>
+		
+		<link rel="stylesheet" href="tiny_alert.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<script src="tiny_alert.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script type="text/javascript" charset="utf-8">
+			
+			window.addEvent('domready',function(){
+				
+				$('simple').addEvent('click',function(e){
+					var b = new TinyAlert();
+					b.show('New Message!','Check your inbox to read.');
+					e.stop();
+				});
+				
+				$('br').addEvent('click',function(e){
+					var b = new TinyAlert({'position':'br'});
+					b.show('New Message!','Check your inbox to read.');
+					e.stop();
+				});
+				
+				$('bl').addEvent('click',function(e){
+					var b = new TinyAlert({'position':'bl'});
+					b.show('New Message!','Check your inbox to read.');
+					e.stop();
+				});
+				
+				$('tl').addEvent('click',function(e){
+					var b = new TinyAlert({'position':'tl'});
+					b.show('New Message!','Check your inbox to read.');
+					e.stop();
+				});
+				
+				$('stack').addEvent('click',function(e){
+					var b = new TinyAlert();
+					b.show('First call.','First show.'); 
+					b.show('Sercond call.','Now stacks.');
+					e.stop();
+				});
+				
+				$('s0').addEvent('click',function(e){
+					var b = new TinyAlert();
+					b.show('Blue skin.','created by @danillos');
+					e.stop();
+				});
+				
+				$('s1').addEvent('click',function(e){
+					var b = new TinyAlert({skin:'snow'});
+					b.show('Snow skin.','created by @danillos');
+					e.stop();
+				});
+				
+				$('s2').addEvent('click',function(e){
+					var b = new TinyAlert({skin:'gray'});
+					b.show('Gray skin.','created by @danillos');
+					e.stop();
+				});
+				
+				$('s3').addEvent('click',function(e){
+					var b = new TinyAlert({skin:'black'});
+					b.show('Black skin.','created by @danillos');
+					e.stop();
+				});
+				
+				$('customdelay').addEvent('click',function(e){
+					var b2 = new TinyAlert({delay:9000});
+					b2.show('Custom duration.','Waiting.. 9 seconds. Click here to close.');
+					e.stop();
+				});
+				
+				$('icon').addEvent('click',function(e){
+					var b = new TinyAlert();
+					var callback = function(a) {
+						alert('Go to Inbox action! '+this+' '+a);
+					}
+					b.show('You received a new email','Check your inbox.','message.png');
+					e.stop();
+				});
+				
+				$('cb').addEvent('click',function(e){
+					var b = new TinyAlert();
+					var callback = function(a) {
+						alert('Go to Inbox action! '+this+' '+a);
+					}
+					b.show('New message on your inbox.','Click here to view.','message.png',callback.bind('param1','param2'));
+					e.stop();
+				});
+				
+			});
+			
+		</script>
+	</head>
+	<body>
+		
+	
+	<h1>TinyAlert</h1>
+	<p>Tiny and simple Growl alert style with Mootools and CSS3 only. (js only ~1.2k)</p>
+	<br>
+	<h2>Examples:</h2>
+	<h3>Basics:</h3>
+	<ul>
+		<li><a href="#" id='simple'>Simple Alert</a></li>
+		<li><a href="#" id='tl'>Top Left</a></li>
+		<li><a href="#" id='bl'>Bottom Left</a></li>
+		<li><a href="#" id='br'>Bottom Right</a></li>
+		<li><a href="#" id='stack'>Stack</a></li>
+		<li><a href="#" id='customdelay'>Custom duration</a></li>
+	</ul>
+	<h3>Skins:</h3>
+	<ul>
+		<li><a href="#" id='s0'>Blue Skin</a></li>
+		<li><a href="#" id='s1'>Snow Skin</a></li>
+		<li><a href="#" id='s2'>Gray Skin</a></li>
+		<li><a href="#" id='s3'>Black Skin</a></li>
+	</ul>
+	
+	<h3>Icons:</h3>
+	<ul>
+		<li><a href="#" id='icon'>Alert with icon</a></li>
+	</ul>
+	
+	
+	<h3>Callbacks:</h3>
+	<ul>
+		<li><a href="#" id='cb'>Alert with callback</a> (click on alert)</li>
+	</ul>
+	
+	<br>
+	<h2>How to use:</h2>
+	<code>
+		var b = new TinyAlert(options); <br><br>
+		Options:<br>
+		el - Element where Bubble will be inject. Default document.body<br>
+		position - Position to show tr,tl,br,bl. Default tr (Top Right)<br>
+		delay - Duration time. Default 3000ms<br>	
+		skin - Bubble skin. Default clean <br><br>
+		Example:<br> var b = new TinyAlert({delay:3000, skin:'black'});<br><br>
+		
+		Methods:<br>
+		show(title, message, icon, callback) <br><br>
+		Simple example:<br> var b = new TinyAlert();<br>
+		b.show('Title','Your message');
+	</code>
+	
+	<br><br>
+	
+	<h2>Dependences:</h2>
+	<ul>
+		<li>Mootools 1.2.4 Core</li>
+		<li>tiny_alert.js (~1.2k)</li>
+		<li>tiny_alert.css (~3.2kb with 4 skins)</li>
+	</ul>
+	
+	<br>
+	<h2>Creating your skins</h2>
+
+	<h3>Styles:</h3>
+	<code>
+		/*Main TinyAlert block style.*/<br>
+		#skbubble > div.skinName {<br>}<br><br>
+		
+		/*Title style.*/<br>
+		#skbubble > div.skinName > span.tatitle{<br>
+			
+		}<br><br>
+		/*Message style.*/<br>
+		#skbubble > div.skinName > span.tamsg{<br>
+
+		}<br>
+	</code>
+	<br><br>
+	<h2>Credits</h2>
+	<p>Created by Danillo C&eacute;sar de O. Melo (<a href="http://twitter.com/danillos">@danillos<a>)<br>
+	Date:	 21/03/2010
+	</p>
+	</body>
+</html>
