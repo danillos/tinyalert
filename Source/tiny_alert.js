@@ -1,3 +1,19 @@
+/*
+---
+description: TinyAlert - Tiny and simple alert with Mootools and CSS3 only.
+
+license: MIT-style
+
+authors:
+- Danillo César de O. Melo
+
+requires:
+- core/1.2.4: '*'
+
+provides: TinyAlert	
+
+...
+*/
 var TinyAlert;
 (function(){
 	$ = document.id;
