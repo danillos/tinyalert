@@ -5,7 +5,7 @@
 		<script src="../../../lib/mootools-1.2.4-core-nc.js" type="text/javascript" charset="utf-8"></script>
 		
 		<link rel="stylesheet" href="../Source/tiny_alert.css" type="text/css" media="screen" title="no title" charset="utf-8">
-		<script src="../Source/tiny_alert.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../Source/tiny_alert_compressed.js" type="text/javascript" charset="utf-8"></script>
 		
 		<script type="text/javascript" charset="utf-8">
 			
@@ -39,6 +39,12 @@
 					var b = new TinyAlert();
 					b.show('First call.','First show.'); 
 					b.show('Sercond call.','Now stacks.');
+					e.stop();
+				});
+				
+				$('s00').addEvent('click',function(e){
+					var b = new TinyAlert({skin:'smoke'});
+					b.show('Smoke Growl skin.','inspired in Growl for mac');
 					e.stop();
 				});
 				
@@ -96,86 +102,102 @@
 	</head>
 	<body>
 		
-	
-	<h1>TinyAlert</h1>
-	<p>Tiny and simple alert with Mootools and CSS3 only. (js only ~1.2k)</p>
-	<br>
-	<h2>Examples:</h2>
-	<h3>Basics:</h3>
-	<ul>
-		<li><a href="#" id='simple'>Simple Alert</a></li>
-		<li><a href="#" id='tl'>Top Left</a></li>
-		<li><a href="#" id='bl'>Bottom Left</a></li>
-		<li><a href="#" id='br'>Bottom Right</a></li>
-		<li><a href="#" id='stack'>Stack</a></li>
-		<li><a href="#" id='customdelay'>Custom duration</a></li>
-	</ul>
-	<h3>Skins:</h3>
-	<ul>
-		<li><a href="#" id='s0'>Blue Skin</a></li>
-		<li><a href="#" id='s1'>Snow Skin</a></li>
-		<li><a href="#" id='s2'>Gray Skin</a></li>
-		<li><a href="#" id='s3'>Black Skin</a></li>
-	</ul>
-	
-	<h3>Icons:</h3>
-	<ul>
-		<li><a href="#" id='icon'>Alert with icon</a></li>
-	</ul>
-	
-	
-	<h3>Callbacks:</h3>
-	<ul>
-		<li><a href="#" id='cb'>Alert with callback</a> (click on alert)</li>
-	</ul>
-	
-	<br>
-	<h2>How to use:</h2>
-	<code>
-		var b = new TinyAlert(options); <br><br>
-		Options:<br>
-		el - Element where Bubble will be inject. Default document.body<br>
-		position - Position to show tr,tl,br,bl. Default tr (Top Right)<br>
-		delay - Duration time. Default 3000ms<br>	
-		skin - Bubble skin. Default clean <br><br>
-		Example:<br> var b = new TinyAlert({delay:3000, skin:'black'});<br><br>
-		
-		Methods:<br>
-		show(title, message, icon, callback) <br><br>
-		Simple example:<br> var b = new TinyAlert();<br>
-		b.show('Title','Your message');
-	</code>
-	
-	<br><br>
-	
-	<h2>Dependences:</h2>
-	<ul>
-		<li>Mootools 1.2.4 Core</li>
-		<li>tiny_alert.js (~1.2k)</li>
-		<li>tiny_alert.css (~3.2kb with 4 skins)</li>
-	</ul>
-	
-	<br>
-	<h2>Creating your skins</h2>
+		<div class="block mainlab">
+			<h1>TinyAlert</h1>
+			<p>Tiny and simple alert system with Mootools and CSS3 only.</p>
+		<pre>
+		<code>
+var ta = new TinyAlert();
+ta.show('Title','Your message.');
+		</code>
+		</pre>
+			<a target="_blank" href="http://github.com/danillos/tinyalert/blob/master/Docs/TinyAlert.md"><strong>documentation</strong></a> | 
+			<a target="_blank" href="http://github.com/danillos/tinyalert/downloads"><strong>download</strong></a> | 
+			<a target="_blank" href="http://www.mootools.net"><strong>mootools</strong></a>
+			<br><br>
+			<br>
+			<h2>Examples:</h2>
+			<h3>Basics:</h3>
+			<ul>
+				<li><a href="#" id='simple'>Simple Alert</a></li>
+				<li><a href="#" id='tl'>Top Left</a></li>
+				<li><a href="#" id='bl'>Bottom Left</a></li>
+				<li><a href="#" id='br'>Bottom Right</a></li>
+				<li><a href="#" id='stack'>Stack</a></li>
+				<li><a href="#" id='customdelay'>Custom duration</a></li>
+			</ul>
+			<h3>Skins:</h3>
+			<ul>
+				<li><a href="#" id='s00'>Smoke Growl Skin</a></li>
+				<li><a href="#" id='s0'>Blue Skin</a></li>
+				<li><a href="#" id='s1'>Snow Skin</a></li>
+				<li><a href="#" id='s2'>Gray Skin</a></li>
+				<li><a href="#" id='s3'>Black Skin</a></li>
+			</ul>
 
-	<h3>Styles:</h3>
-	<code>
-		/*Main TinyAlert block style.*/<br>
-		#skbubble > div.skinName {<br>}<br><br>
-		
-		/*Title style.*/<br>
-		#skbubble > div.skinName > span.tatitle{<br>
-			
-		}<br><br>
-		/*Message style.*/<br>
-		#skbubble > div.skinName > span.tamsg{<br>
+			<h3>Icons:</h3>
+			<ul>
+				<li><a href="#" id='icon'>Alert with icon</a></li>
+			</ul>
 
-		}<br>
-	</code>
-	<br><br>
-	<h2>Credits</h2>
-	<p>Created by Danillo C&eacute;sar de O. Melo (<a href="http://twitter.com/danillos">@danillos<a>)<br>
-	Date:	 21/03/2010
-	</p>
+
+			<h3>Callbacks:</h3>
+			<ul>
+				<li><a href="#" id='cb'>Alert with callback</a> (click on alert)</li>
+			</ul>
+
+			<br>
+			<h2>How to use:</h2>
+			<code>
+				var b = new TinyAlert(options); <br><br>
+				Options:<br><br>
+				el - Element where Bubble will be inject. Default document.body<br>
+				position - Position to show tr,tl,br,bl. Default tr (Top Right)<br>
+				delay - Duration time. Default 3000ms<br>	
+				skin - Bubble skin. Default clean <br><br>
+				Example:<br> var b = new TinyAlert({delay:3000, skin:'black'});<br><br>
+
+				Methods:<br>
+				show(title, message, icon, callback) <br><br><br>
+				Simple example:<br><br> var b = new TinyAlert();<br>
+				b.show('Title','Your message');
+			</code>
+
+			<br><br>
+
+			<h2>Dependences:</h2>
+			<ul>
+				<li>Mootools 1.2.4 Core</li>
+				<li>tiny_alert.js (~1.4k | ~0.5k compressed and Gzip)</li>
+				<li>tiny_alert.css (~3.5kb with 5 skins)</li>
+			</ul>
+
+			<br>
+			<h2>Creating your skins</h2>
+
+			<h3>Styles:</h3>
+			<pre>
+			<code>
+/*Main TinyAlert block style.*/
+#skbubble > div.skinName {
+
+}
+
+/*Title style.*/
+#skbubble > div.skinName > span.tatitle{
+
+}
+
+/*Message style.*/
+#skbubble > div.skinName > span.tamsg{
+
+}
+			</code>
+			</pre>
+			<h2>Credits</h2>
+			<p>Created by Danillo C&eacute;sar de O. Melo (<a href="http://twitter.com/danillos">@danillos</a>)<br>
+			Date:	 21/03/2010
+			</p>
+		</div>
 	</body>
 </html>
