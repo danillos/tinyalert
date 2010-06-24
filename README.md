@@ -1,7 +1,7 @@
 TinyAlert
 ===========
 
-Tiny and simple alert with Mootools and CSS3 only. (js only ~1.2k)
+Tiny and simple alert with Mootools and CSS3 only. (js only ~1.4k uncompressed)
 
 How to use
 ----------
