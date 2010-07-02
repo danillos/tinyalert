@@ -34,7 +34,7 @@ Creating your skins Styles:
 
 	}
 
-[Live Creation](http://www.jsfiddle.net/LFXtZ/)
+[Live Creation](http://www.jsfiddle.net/yy5S6/)
 	
 See Demo and Documentation for more detail.
 
