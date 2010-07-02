@@ -9,7 +9,7 @@ TinyAlert Method: constructor {#TinyAlert:constructor}
 
 ### Notes:
 
-- version 1.0
+- version 1.3
 
 ### Syntax:
 
