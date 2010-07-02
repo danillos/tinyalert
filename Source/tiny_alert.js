@@ -14,10 +14,10 @@ provides: TinyAlert
 
 ...
 */
-var TinyAlert;
-(function(){
-	$ = document.id;
-	TinyAlert = new Class({
+
+(function($){
+
+	this.TinyAlert = new Class({
 		initialize: function(opt) {
 			if(!opt) opt = {};
 			this.skin = opt.skin || 'blue';
@@ -60,4 +60,4 @@ var TinyAlert;
 			fx.start('opacity',0);
 		}
 	});
-})();
+})(document.id);
