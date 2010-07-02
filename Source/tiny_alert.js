@@ -14,7 +14,7 @@ provides: TinyAlert
 
 ...
 */
-var TinyAlert;
+
 (function($){
 
 	this.TinyAlert = new Class({
