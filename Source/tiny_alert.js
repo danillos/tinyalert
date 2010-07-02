@@ -48,8 +48,8 @@ var TinyAlert;
 			
 			var fx = new Fx.Tween(b,{duration:250});
 			b.store('fx',fx);
+			fx.addEvent('complete',function(){b.set('style','');});
 			fx.start('opacity',1);
-			b.set('style','');
 			this.close.delay(this.delay,this,b);
 		},
 		

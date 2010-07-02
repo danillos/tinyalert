@@ -6,7 +6,7 @@ Tiny and simple alert with Mootools and CSS3 only. (js only ~1.4k uncompressed)
 How to use
 ----------
 
-Include on head:
+Include on page:
 
 	<script src="mootools-1.2.4+-core.js" type="text/javascript"></script>
 	<script src="tiny_alert.js" type="text/javascript"></script>
