@@ -1,5 +1,7 @@
 TinyAlert
 ===========
+![Screenshot](http://www.danillocesar.com.br/images/labs/tinyalert.png)
+
 
 Tiny and simple alert with Mootools and CSS3 only. (js only ~1.4k uncompressed)
 
