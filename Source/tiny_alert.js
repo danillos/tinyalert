@@ -14,9 +14,7 @@ provides: TinyAlert
 
 ...
 */
-
 (function($){
-
 	this.TinyAlert = new Class({
 		initialize: function(opt) {
 			if(!opt) opt = {};
