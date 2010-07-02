@@ -20,21 +20,21 @@ Simple example:
 Creating your skins Styles:
 
 	/*Main TinyAlert block style.*/
-	#skbubble > div.skinName {
+	#tinyalert > div.skinName {
 
 	}
 
 	/*Title style.*/
-	#skbubble > div.skinName > span.tatitle{
+	#tinyalert > div.skinName > span.tatitle{
 
 	}
 
 	/*Message style.*/
-	#skbubble > div.skinName > span.tamsg{
+	#tinyalert > div.skinName > span.tamsg{
 
 	}
 
-
+[Live Creation](http://www.jsfiddle.net/LFXtZ/)
 	
 See Demo and Documentation for more detail.
 
