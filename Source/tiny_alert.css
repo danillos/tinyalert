@@ -72,7 +72,7 @@
 		background-color: #e6f6ff;
 		border: 1px solid #95b1cf;
 		background-image: -moz-linear-gradient(top, #e6f6ff,#cde4f2); /* FF3.6 */
-		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #e6f6ff),color-stop(1, #cde4f2)); /* Saf4+, Chrome */
+		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #cde4f2),color-stop(1, #e6f6ff)); /* Saf4+, Chrome */
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#e6f6ff', endColorstr='#cde4f2')"; /* IE8 */
 	}
 	
@@ -93,7 +93,7 @@
 		background-color: #e6f6ff;
 		border: 1px solid #95b1cf;
 		background-image: -moz-linear-gradient(top, #fff,#f0f0f0); /* FF3.6 */
-		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #fff),color-stop(1, #f0f0f0)); /* Saf4+, Chrome */
+		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #f0f0f0),color-stop(1, #fff)); /* Saf4+, Chrome */
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#f0f0f0')"; /* IE8 */
 	}
 	
@@ -113,7 +113,7 @@
 		background-color: #cdcdcd;
 		border: 1px solid #9c9c9c;
 		background-image: -moz-linear-gradient(top, #cdcdcd,#b0b0b0); /* FF3.6 */
-		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #cdcdcd),color-stop(1, #b0b0b0)); /* Saf4+, Chrome */
+		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #b0b0b0),color-stop(1, #cdcdcd)); /* Saf4+, Chrome */
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#cdcdcd', endColorstr='#b0b0b0')"; /* IE8 */
 	}
 	
@@ -133,7 +133,7 @@
 		background-color: #393939;
 		border: 1px solid #1a1a1a;
 		background-image: -moz-linear-gradient(top, #393939,#151515); /* FF3.6 */
-		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #393939),color-stop(1, #151515)); /* Saf4+, Chrome */
+		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #151515),color-stop(1, #393939)); /* Saf4+, Chrome */
 		-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#393939', endColorstr='#151515')"; /* IE8 */
 	}
 	
