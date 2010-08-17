@@ -42,8 +42,4 @@ See Demo and Documentation for more detail.
 
 [DEMO](http://www.danillocesar.com.br/labs/tinyalert "TinyAlert DEMO") | [DOCUMENTATION](http://github.com/danillos/tinyalert/blob/master/Docs/TinyAlert.md "View Documentation") | [DOWNLOAD](http://github.com/danillos/tinyalert/downloads)
 
-TODO
-----
-
-* Independent position
 
